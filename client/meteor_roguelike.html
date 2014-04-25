@@ -1,0 +1,39 @@
+<head>
+  <title>meteor_roguelike</title>
+</head>
+
+<body>
+  <p>
+    Move around with arrow keys.  Chase the %.
+  </p>
+  {{ > loginButtons }}
+  {{> scoreboard }}
+  {{> world_grid }}
+</body>
+
+<template name="world_grid">
+  <div id="grid_world">
+    <table> {{#each eachRow}}
+      <tr> {{#each eachCell}}
+        <td> {{> cell }}</td>
+      {{/each}} </tr>
+    {{/each}} </table>
+  </div>
+</template>
+
+<template name="cell">
+  {{#with cell_contents}}
+    <span style="color: {{get_color}};">
+      {{{get_body}}}
+    </span>
+  {{/with}}
+</template>
+
+<template name="scoreboard">
+  <div id="scoreboard">
+    <h4>Scores</h4>
+    <ul>{{#each players_by_score}}
+        <li>{{name}}: {{score}}</li>
+    {{/each}}</ul>
+  </div>
+</template>

@@ -1,0 +1,21 @@
+/* CSS declarations go here */
+#grid_world {
+  font-family: Courier New;
+}
+
+#scoreboard {
+  float: right;
+}
+
+td {
+  height: 20px;
+  width: 20px;
+}
+
+.fb_profilephoto {
+  height: 15px;
+  width: 15px;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+}
