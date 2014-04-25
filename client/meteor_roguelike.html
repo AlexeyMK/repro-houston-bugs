@@ -6,7 +6,7 @@
   <p>
     Move around with arrow keys.  Chase the %.
   </p>
-  {{ > loginButtons }}
+  {{> loginButtons }}
   {{> scoreboard }}
   {{> world_grid }}
 </body>
@@ -35,5 +35,12 @@
     <ul>{{#each players_by_score}}
         <li>{{name}}: {{score}}</li>
     {{/each}}</ul>
+  </div>
+</template>
+
+<template name="admin_powers">
+  <div>
+    There are {{nonzero_users}} users with scores above zero.
+    <a class="btn btn-large reset-scores">Reset</a>
   </div>
 </template>

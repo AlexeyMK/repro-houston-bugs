@@ -19,7 +19,7 @@ Accounts.onCreateUser(function(options, user) {
 // movement
 Entity.allow({
   update: function(userId, old_entity, fieldNames, mods) {
-    var changable_fieldnames = ['position'];
+    var changable_fieldnames = ['position', 'score'];
     if (_.difference(fieldNames, changable_fieldnames).length) {
       return false;  //we don't let you change this field from client
     }
