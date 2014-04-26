@@ -2,6 +2,10 @@ Houston.menu({
   'type': 'template',
   'use': 'admin_powers',
   'title': 'Power Tools'
+}, {
+  'type': 'link',
+  'use': '/',
+  'title': 'Back to Game'
 });
 
 Template.admin_powers.helpers({
